@@ -28,6 +28,23 @@ Aqui está uma demonstração do aplicativo em funcionamento:
 - **Plotly** - Visualizações interativas
 - **Jupyter Notebook** - Análise exploratória inicial
 
+## 📈 Versões do Dashboard
+
+O projeto possui duas versões do dashboard:
+
+### 1. Dashboard Original (app.py)
+- Focado na visualização de dados específicos
+- Dividido em abas temáticas (demografia, educação, saúde)
+- Ideal para análise detalhada de dados
+
+### 2. Dashboard Executivo (dashboard_executivo.py)
+- **NOVO!** Visão executiva e estratégica do projeto completo
+- Inclui contexto, objetivos e metodologia da pesquisa
+- Apresenta métricas-chave e resumo executivo
+- Oferece insights e recomendações baseadas nos dados
+- Design moderno e interface mais amigável
+- Inclui painel de conclusões e recomendações
+
 ## 🚀 Como Executar
 
 ### Requisitos
@@ -49,8 +66,15 @@ pip install -r requirements.txt
 ```
 
 3. Execute a aplicação Shiny
+
+Para o dashboard original:
 ```bash
 shiny run --reload app.py
+```
+
+Para o dashboard executivo interativo:
+```bash
+shiny run --reload dashboard_executivo.py
 ```
 
 4. Acesse a aplicação no navegador (geralmente em http://localhost:8000)
