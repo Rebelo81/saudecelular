@@ -2,7 +2,7 @@
 
 ![Dashboard de análise de uso de celulares](plots/correlacao_uso_celular.png)
 
-Este projeto é um painel interativo desenvolvido com **Shiny para Python**, que analisa o impacto do uso de dispositivos móveis na saúde e educação de estudantes. A aplicação apresenta visualizações detalhadas sobre hábitos de uso, sintomas relatados e correlações entre uso de dispositivos e bem-estar.
+Este projeto é um painel interativo desenvolvido com **Shiny para Python**, que analisa o impacto do uso de dispositivos móveis na saúde e educação de estudantes. A aplicação apresenta visualizações detalhadas sobre hábitos de uso, sintomas relatados e relações entre uso de dispositivos e bem-estar.
 
 ## 🎥 Demonstração
 
@@ -17,7 +17,7 @@ Aqui está uma demonstração do aplicativo em funcionamento:
 - Análise demográfica dos usuários por gênero e faixa etária
 - Padrões de uso de dispositivos móveis para educação
 - Sintomas relatados associados ao uso prolongado
-- Correlações entre tempo de uso, impacto no desempenho e saúde
+- Análises sobre tempo de uso, impacto no desempenho e saúde
 - Visualizações interativas com filtros dinâmicos
 
 ## 🔧 Tecnologias Utilizadas
@@ -74,7 +74,7 @@ shiny run --reload app.py
 
 Para o dashboard executivo interativo:
 ```bash
-shiny run --reload dashboard_executivo.py
+shiny run dashboard_executivo.py --reload
 ```
 
 4. Acesse a aplicação no navegador (geralmente em http://localhost:8000)
@@ -90,7 +90,7 @@ shiny run --reload dashboard_executivo.py
 
 ## 📊 Fonte dos Dados
 
-Os dados utilizados neste projeto foram obtidos do [Kaggle](https://www.kaggle.com/datasets/innocentmfa/students-health-and-academic-performance/data).
+Os dados utilizados neste projeto foram obtidos do [Kaggle](https://www.kaggle.com/datasets/innocentmfa/students-health-and-academic-performance/data). Segundo o criador dessa base de dados do Kaggle, esses dados foram coletados por meio do formulário do Google para pesquisa, sem mais informações disponíveis sobre a metodologia de coleta dos dados.
 
 ## 📝 Licença
 
@@ -109,7 +109,7 @@ Este projeto demonstra habilidades em:
 
 Ao compartilhar no LinkedIn, destaque estas habilidades técnicas e o impacto do seu projeto:
 
-> Desenvolvi um dashboard interativo para análise do impacto do uso de celulares na saúde e educação, utilizando Python, Shiny e Plotly. O projeto demonstra visualizações interativas e análises estatísticas que revelam correlações importantes entre tempo de uso e indicadores de saúde.
+> Desenvolvi um dashboard interativo para análise do impacto do uso de celulares na saúde e educação, utilizando Python, Shiny e Plotly. O projeto demonstra visualizações interativas e análises estatísticas que revelam relações importantes entre tempo de uso e indicadores de saúde.
 >
 > Tecnologias: Python, Pandas, Plotly, Shiny
 >

@@ -56,8 +56,8 @@ app_ui = ui.page_fluid(
     # Painel informativo sobre o projeto
     ui.card(
         ui.card_header("Sobre o Projeto"),
-        ui.layout_sidebar(
-            ui.panel_sidebar(
+        ui.row(
+            ui.column(4,
                 ui.h4("Contexto"),
                 ui.p("Este projeto analisa dados de estudantes sobre o uso de dispositivos móveis e seu impacto na saúde e na educação. A pesquisa foi conduzida com estudantes de diferentes faixas etárias e gêneros para entender como o uso de celulares afeta diversos aspectos de suas vidas."),
                 ui.h4("Objetivos"),
@@ -66,10 +66,9 @@ app_ui = ui.page_fluid(
                     ui.tags.li("Identificar correlações entre tempo de uso e impactos na saúde"),
                     ui.tags.li("Avaliar o uso de celulares para fins educacionais"),
                     ui.tags.li("Fornecer insights para políticas de uso consciente"),
-                ),
-                width=4
+                )
             ),
-            ui.panel_main(
+            ui.column(8,
                 ui.h4("Principais Perguntas de Pesquisa"),
                 ui.div(
                     ui.tags.ol(
@@ -216,10 +215,6 @@ app_ui = ui.page_fluid(
         ),
         
         ui.nav_panel("📈 Análise de Correlações",
-            ui.card(
-                ui.card_header("Matriz de Correlação entre Variáveis"),
-                ui.output_plot("grafico_correlacao")
-            ),
             ui.row(
                 ui.column(6, 
                     ui.card(
@@ -235,11 +230,11 @@ app_ui = ui.page_fluid(
                 )
             ),
             ui.card(
-                ui.card_header("Insights - Correlações"),
+                ui.card_header("Insights - Análise de Relações"),
                 ui.div(
                     ui.h5("Principais Observações:"),
                     ui.tags.ul(
-                        ui.tags.li("A correlação mais forte observada é entre o tempo de uso diário e a frequência de sintomas reportados."),
+                        ui.tags.li("Observa-se uma forte relação entre o tempo de uso diário e a frequência de sintomas reportados."),
                         ui.tags.li("Existe uma relação positiva entre o uso educacional e impacto no desempenho, quando o uso é moderado."),
                         ui.tags.li("Precauções de saúde mostram efeito mitigador na frequência e intensidade dos sintomas reportados."),
                     ),
@@ -643,58 +638,7 @@ def server(input, output, session):
         
         return go.Figure()
     
-    # Gráficos para Correlações
-    @output
-    @render_plotly
-    def grafico_correlacao():
-        df = load_data()
-        
-        # Mapear categorias para valores numéricos para criar correlações
-        maps = {
-            'mobilephoneuseforeducation': {'Frequently': 4, 'Sometimes': 3, 'Rarely': 2, 'Never': 1},
-            'dailyusages': {'<2hours': 1, '2-4hours': 2, '4-6hours': 3, '>6hours': 4},
-            'performanceimpact': {'Stronglyagree': 5, 'Agree': 4, 'Neutral': 3, 'Disagree': 2, 'Stronglydisagree': 1},
-            'symptomfrequency': {'Frequently': 4, 'Sometimes': 3, 'Rarely': 2, 'Never': 1},
-            'healthrating': {'Excellent': 4, 'Good': 3, 'Fair': 2, 'Poor': 1}
-        }
-        
-        # Aplicar mapeamento para colunas que existem
-        for col, mapping in maps.items():
-            if col in df.columns:
-                df[col + '_num'] = df[col].map(mapping)
-        
-        # Selecionar colunas numéricas para correlação
-        numeric_cols = [col for col in df.columns if col.endswith('_num')]
-        
-        if len(numeric_cols) > 1:
-            corr = df[numeric_cols].corr()
-            
-            # Nomes mais amigáveis para o gráfico
-            nice_names = {
-                'mobilephoneuseforeducation_num': 'Uso Educacional',
-                'dailyusages_num': 'Tempo de Uso Diário',
-                'performanceimpact_num': 'Impacto no Desempenho',
-                'symptomfrequency_num': 'Frequência de Sintomas',
-                'healthrating_num': 'Avaliação de Saúde'
-            }
-            
-            corr.index = [nice_names.get(col, col) for col in corr.index]
-            corr.columns = [nice_names.get(col, col) for col in corr.columns]
-            
-            fig = px.imshow(
-                corr,
-                color_continuous_scale=['#f5f7ff', '#6e8efb'],
-                text_auto=True,
-                title='Matriz de Correlação entre Variáveis'
-            )
-            
-            fig.update_layout(
-                height=500
-            )
-            return fig
-        
-        return go.Figure()
-    
+    # Gráficos para Relações
     @output
     @render_plotly
     def grafico_uso_vs_saude():
