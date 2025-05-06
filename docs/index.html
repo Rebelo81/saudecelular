@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saúde Celular - Impacto do Uso de Celulares</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .hero {
             background: linear-gradient(135deg, #6e8efb, #a777e3);
@@ -20,6 +21,53 @@
             border-radius: 8px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             max-width: 100%;
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+        .badge-tech {
+            background-color: #6e8efb;
+            color: white;
+            font-weight: normal;
+            padding: 6px 12px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        .linkedin-section {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin-top: 30px;
+            border-left: 5px solid #0077B5;
+        }
+        .copy-btn {
+            cursor: pointer;
+            padding: 5px 10px;
+            background: #0077B5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .copy-btn:hover {
+            background: #005582;
+        }
+        .quote-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0077B5;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .btn-primary {
+            background-color: #6e8efb;
+            border-color: #6e8efb;
+        }
+        .btn-primary:hover {
+            background-color: #5b7df9;
+            border-color: #5b7df9;
         }
     </style>
 </head>
@@ -28,7 +76,14 @@
         <div class="container">
             <h1 class="display-4">📱 Saúde Celular</h1>
             <p class="lead mb-4">Análise do impacto do uso de celulares na educação e saúde dos estudantes</p>
-            <a href="https://github.com/Rebelo81/saudecelular" class="btn btn-light">Ver no GitHub</a>
+            <div>
+                <a href="https://github.com/Rebelo81/saudecelular" class="btn btn-light me-2">
+                    <i class="fab fa-github"></i> Ver no GitHub
+                </a>
+                <a href="#linkedin" class="btn btn-light">
+                    <i class="fab fa-linkedin"></i> Compartilhar no LinkedIn
+                </a>
+            </div>
         </div>
     </header>
 
@@ -38,6 +93,13 @@
                 <h2>Sobre o Projeto</h2>
                 <p>Este projeto é um painel interativo desenvolvido com <strong>Shiny para Python</strong>, que analisa o impacto do uso de dispositivos móveis na saúde e educação de estudantes. A aplicação apresenta visualizações detalhadas sobre hábitos de uso, sintomas relatados e correlações entre uso de dispositivos e bem-estar.</p>
                 <p>Os dados utilizados foram obtidos do <a href="https://www.kaggle.com/datasets/innocentmfa/students-health-and-academic-performance/data" target="_blank">Kaggle</a>.</p>
+                <div class="mt-3">
+                    <span class="badge-tech">Python</span>
+                    <span class="badge-tech">Pandas</span>
+                    <span class="badge-tech">Plotly</span>
+                    <span class="badge-tech">Shiny</span>
+                    <span class="badge-tech">Data Visualization</span>
+                </div>
             </div>
             <div class="col-md-6 text-center">
                 <img src="https://raw.githubusercontent.com/Rebelo81/saudecelular/master/plots/correlacao_uso_celular.png" alt="Dashboard Screenshot" class="screenshot img-fluid">
@@ -66,7 +128,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mb-5">
             <h2 class="text-center mb-4">Como Executar o Projeto</h2>
             <div class="col-lg-8 mx-auto">
                 <div class="card">
@@ -93,6 +155,45 @@ shiny run --reload app.py
                 </div>
             </div>
         </div>
+
+        <div id="linkedin" class="row">
+            <div class="col-12 linkedin-section">
+                <h2><i class="fab fa-linkedin"></i> Compartilhar no LinkedIn</h2>
+                <p>Este projeto demonstra várias habilidades técnicas que são valiosas para destacar em seu perfil profissional:</p>
+                
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <h5>Habilidades técnicas demonstradas:</h5>
+                        <ul>
+                            <li><strong>Análise de Dados</strong> com Python e Pandas</li>
+                            <li><strong>Visualização interativa</strong> com Plotly</li>
+                            <li><strong>Desenvolvimento web</strong> com Shiny</li>
+                            <li><strong>Versionamento</strong> com Git e GitHub</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Áreas de conhecimento:</h5>
+                        <ul>
+                            <li>Ciência de Dados</li>
+                            <li>Desenvolvimento de Dashboard</li>
+                            <li>UX/UI</li>
+                            <li>Análise estatística</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h5>Texto para compartilhar no LinkedIn: <button class="copy-btn" onclick="copyLinkedinText()">Copiar</button></h5>
+                <div class="quote-box" id="linkedin-text">
+                    Desenvolvi um dashboard interativo para análise do impacto do uso de celulares na saúde e educação, utilizando Python, Shiny e Plotly. O projeto demonstra visualizações interativas e análises estatísticas que revelam correlações importantes entre tempo de uso e indicadores de saúde.
+
+                    Confira o código e a documentação no GitHub: https://github.com/Rebelo81/saudecelular
+
+                    Tecnologias: Python, Pandas, Plotly, Shiny
+
+                    #DataScience #Python #Dashboard #Visualização #AnáliseDeDados
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="bg-light py-4 mt-5">
@@ -103,5 +204,21 @@ shiny run --reload app.py
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function copyLinkedinText() {
+            const text = document.getElementById('linkedin-text').innerText;
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    const btn = document.querySelector('.copy-btn');
+                    btn.textContent = "Copiado!";
+                    setTimeout(() => {
+                        btn.textContent = "Copiar";
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Erro ao copiar texto: ', err);
+                });
+        }
+    </script>
 </body>
 </html> 

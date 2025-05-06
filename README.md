@@ -4,6 +4,14 @@
 
 Este projeto é um painel interativo desenvolvido com **Shiny para Python**, que analisa o impacto do uso de dispositivos móveis na saúde e educação de estudantes. A aplicação apresenta visualizações detalhadas sobre hábitos de uso, sintomas relatados e correlações entre uso de dispositivos e bem-estar.
 
+## 🎥 Demonstração
+
+Aqui está uma demonstração do aplicativo em funcionamento:
+
+[![Demonstração em vídeo](plots/correlacao_uso_celular.png)](https://github.com/Rebelo81/saudecelular)
+
+*Clique para ver o aplicativo completo*
+
 ## 📊 Principais Funcionalidades
 
 - Análise demográfica dos usuários por gênero e faixa etária
@@ -63,6 +71,25 @@ Os dados utilizados neste projeto foram obtidos do [Kaggle](https://www.kaggle.c
 ## 📝 Licença
 
 Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+
+---
+
+## 🔗 Compartilhando no LinkedIn
+
+Este projeto demonstra habilidades em:
+
+- **Análise de Dados** com Python e Pandas
+- **Visualização interativa** com Plotly e Shiny
+- **Dashboard web** com interface responsiva
+- **Controle de versão** com Git e GitHub
+
+Ao compartilhar no LinkedIn, destaque estas habilidades técnicas e o impacto do seu projeto:
+
+> Desenvolvi um dashboard interativo para análise do impacto do uso de celulares na saúde e educação, utilizando Python, Shiny e Plotly. O projeto demonstra visualizações interativas e análises estatísticas que revelam correlações importantes entre tempo de uso e indicadores de saúde.
+>
+> Tecnologias: Python, Pandas, Plotly, Shiny
+>
+> #DataScience #Python #Dashboard #Visualização
 
 ---
 
