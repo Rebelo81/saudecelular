@@ -39,7 +39,7 @@ Aqui está uma demonstração do aplicativo em funcionamento:
 
 1. Clone este repositório
 ```bash
-git clone https://github.com/seu-usuario/SaudeCelular.git
+git clone https://github.com/Rebelo81/SaudeCelular.git
 cd SaudeCelular
 ```
 
@@ -93,4 +93,4 @@ Ao compartilhar no LinkedIn, destaque estas habilidades técnicas e o impacto do
 
 ---
 
-Desenvolvido como parte de um estudo sobre o impacto da tecnologia na saúde e educação. 
+Desenvolvido como parte de um estudo sobre o impacto da tecnologia na saúde e educação.
