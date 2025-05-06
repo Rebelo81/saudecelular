@@ -1,5 +1,7 @@
 # 📱 Saúde Celular - Impacto do Uso de Celulares na Educação e Saúde
 
+![Dashboard de análise de uso de celulares](plots/correlacao_uso_celular.png)
+
 Este projeto é um painel interativo desenvolvido com **Shiny para Python**, que analisa o impacto do uso de dispositivos móveis na saúde e educação de estudantes. A aplicação apresenta visualizações detalhadas sobre hábitos de uso, sintomas relatados e correlações entre uso de dispositivos e bem-estar.
 
 ## 📊 Principais Funcionalidades
