@@ -31,7 +31,7 @@ Este projeto é um painel interativo desenvolvido com **Shiny para Python**, que
 
 1. Clone este repositório
 ```bash
-git clone https://github.com/seu-usuario/SaudeCelular.git
+git clone https://github.com/Rebelo81/SaudeCelular.git
 cd SaudeCelular
 ```
 
