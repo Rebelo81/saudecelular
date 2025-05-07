@@ -33,19 +33,6 @@ saudecelular/
 └── como_compartilhar.md      → Guia para divulgar no LinkedIn
 ```
 
----
-
-## 🚀 Executar no Posit Cloud
-
-[![Run on Posit Cloud](https://posit.cloud/images/run-on-posit-cloud.svg)](https://connect.posit.cloud/paulocesar/content/new?tab=example)
-
-1. Acesse [posit.cloud](https://connect.posit.cloud)
-2. Clique em “New Content” > “Upload and Deploy”
-3. Envie `dashboard_executivo.py`, `saudevscelular.csv` e `requirements.txt`
-4. Clique em **Run App**
-
----
-
 ## 💡 Tecnologias Utilizadas
 
 - Python 3
